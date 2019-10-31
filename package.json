@@ -1,0 +1,50 @@
+{
+  "name": "@kiwicom/relay",
+  "private": false,
+  "version": "4.7.1",
+  "main": "src/index",
+  "module": false,
+  "sideEffects": false,
+  "homepage": "https://github.com/kiwicom/relay",
+  "description": "Highly opinionated Relay wrapper used at Kiwi.com",
+  "license": "MIT",
+  "bin": {
+    "kiwicom-fetch-schema": "bin/fetch-schema.js",
+    "kiwicom-relay-compiler": "bin/relay-compiler.js"
+  },
+  "scripts": {
+    "test": "yarn eslint src && yarn flow src",
+    "regenerate": "./bin/relay-compiler.js --src=. --schema=../../incubator/graphql.kiwi.com.schema.gql"
+  },
+  "dependencies": {
+    "@babel/register": "^7.6.0",
+    "@kiwicom/fetch": "^2.4.3",
+    "@kiwicom/js": "^0.17.0",
+    "@kiwicom/logger": "^0.3.0",
+    "@kiwicom/monorepo-utils": "^0.24.0",
+    "@kiwicom/signed-source": "^1.0.4",
+    "babel-plugin-relay": "^7.0.0",
+    "commander": "^3.0.2",
+    "is-ci": "^2.0.0",
+    "react-relay": "^7.0.0",
+    "relay-compiler": "^7.0.0",
+    "relay-config": "^7.0.0",
+    "relay-runtime": "^7.0.0"
+  },
+  "devDependencies": {
+    "@kiwicom/babel-preset-kiwicom": "^3.4.0",
+    "@kiwicom/eslint-config": "^8.0.0",
+    "@kiwicom/test-utils": "^0.10.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "flow-bin": "^0.110.1",
+    "jest": "^24.9.0",
+    "react": "^16.11.0",
+    "react-test-renderer": "^16.11.0",
+    "relay-test-utils": "^7.0.0"
+  },
+  "peerDependencies": {
+    "graphql": "^14.5.6",
+    "react": "^16.9.0"
+  }
+}
